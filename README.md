@@ -1,3 +1,6 @@
+
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)![.Net](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white)
+
 # Papae-AudioManager
 ![AudioManager - Papae2D.AudioEngine](https://github.com/oluwaseyeayinla/oluwaseyeayinla.github.io/blob/master/papae/audio_manager/promotional_images/860-x-389.jpg)
 
@@ -29,34 +32,57 @@ Note that you have to import the namespace **Papae.UnitySDK.Managers** to use th
 
 
 ### Fade out the current music and fade in the next music within 4 seconds
-> AudioManager.Instance.PlayBGM(sound_clip, MusicTransition.LinearFade, 4f);
+```c#
+AudioManager.Instance.PlayBGM(sound_clip, MusicTransition.LinearFade, 4f);
+```
 
 ### Play a sound clip for the duration of 10 seconds
-> AudioManager.Instance.PlaySFX(sound_clip, 10f);
+```c#
+AudioManager.Instance.PlaySFX(sound_clip, 10f);
+```
 
 ### Loop or repeat a sound at a particular world location 5 times
-> AudioManager.Instance.RepeatSFX(clip, world_location, 5);
+```c#
+AudioManager.Instance.RepeatSFX(clip, world_location, 5);
+```
 
 ### Load an audio clip from the resources folder and save to the playlist
-> AudioManager.Instance.LoadClip(resources_path, true);
+```c#
+AudioManager.Instance.LoadClip(resources_path, true);
+```
 
 ### Play a sound clip from the playlist once
-> AudioManager.Instance.PlayOneShot(AudioManager.Instance.GetClipFromPlaylist(“clip_name”));
+```c#
+AudioManager.Instance.PlayOneShot(AudioManager.Instance.GetClipFromPlaylist(“clip_name”));
+```
 
 ### Play a single instance of a sound clip forever until external stop
-> AudioManager.Instance.RepeatSFX(clip, -1, true);
+```c#
+AudioManager.Instance.RepeatSFX(clip, -1, true);
+```
+> [!Note] 
+You can also use the PlaySFX to loop a sound forever. Just pass the `float.PositiveInfinity` as the duration parameter.
 
-Note: You can also use the PlaySFX to loop a sound forever. Just pass the float.PositiveInfinity as the duration parameter.
 
 ### Load a wave audio file from a specified url path but don’t add to playlist
-> AudioManager.Instance.LoadClip(url_string, AudioType.WAV, false, callback);
+```c#
+AudioManager.Instance.LoadClip(url_string, AudioType.WAV, false, callback);
+```
 
 
 Read the [API Reference](https://oluwaseyeayinla.github.io/papae/audio_manager/api_reference/html/annotated.html) for more information.
 
 
-## Authors
-- Oluwaseye Ayinla (https://github.com/oluwaseyeayinla)
+## Author
+
+[@oluwaseyeayinla](https://github.com/oluwaseyeayinla) 
+
+
+[![Ko-fi Badge](https://flat.badgen.net/badge/Buy%20me%20a%20coffee/Ko-fi/FF5E5B?icon=buymeacoffee)](https://ko-fi.com/oluwaseyeayinla)
+
+[![Ko-fi Badge](https://flat.badgen.net/badge/Buy%20me%20a%20coffee/Revolut/191C1F?icon=buymeacoffee)](https://revolut.me/oluwaseyeayinla)
+
+
 
 ## Current Version
 Version 1.3.1
